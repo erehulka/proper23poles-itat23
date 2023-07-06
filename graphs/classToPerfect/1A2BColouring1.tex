@@ -1,0 +1,44 @@
+%\begin{tikzpicture}[every node/.style={draw,circle,very thick, fill=black}]
+%	
+%	\node[draw=none, fill=none] (1) at (-1,2) {$c_1$};
+%	\node[draw=none, fill=none] (2) at (-1,1) {$c_2$};
+%	\node[draw=none, fill=none] (3) at (-1,0) {$c_3$};
+%	\node (4) at (1,2) {};
+%	\node (5) at (1,1) {};
+%	\node (6) at (1,0) {};
+%	\node (7) at (2,2) {};
+%	\node[draw=none, fill=none] (9) at (4,2.5) {$b'_1$};
+%	\node[draw=none, fill=none] (10) at (4,1.5) {$b'_2$};
+%	\node[draw=none, fill=none] (11) at (4,0) {$b'_3$};
+%	
+%	\path (1) edge node[draw=none, fill=none,above] {3} (4);
+%	\path (2) edge node[draw=none, fill=none,above] {3} (5);
+%	\path (3) edge node[draw=none, fill=none,above] {3} (6);
+%	\path (4) edge node[draw=none, fill=none,right] {2} (5);
+%	\path (5) edge node[draw=none, fill=none,right] {1} (6);
+%	\path (4) edge node[draw=none, fill=none,above] {1} (7);
+%	\path (6) edge node[draw=none, fill=none,above] {2} (11);
+%	\path (7) edge node[draw=none, fill=none,above] {3} (9);
+%	\path (7) edge node[draw=none, fill=none,below] {2} (10);
+%	
+%\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={draw,circle,very thick, fill=black}]
+	
+	\node[draw=none, fill=none] (1) at (-1,2) {$c_1$};
+	\node[draw=none, fill=none] (2) at (-1,1) {$c_2$};
+	\node[draw=none, fill=none] (3) at (-1,0) {$c_3$};
+	\node (4) at (1,2) {};
+	\node (5) at (1,0) {};
+	\node[draw=none, fill=none] (6) at (3,2) {$b'_1$};
+	\node[draw=none, fill=none] (7) at (3,1) {$b'_2$};
+	\node[draw=none, fill=none] (8) at (3,0) {$b'_3$};
+	
+	\path (1) edge node[draw=none, fill=none,above] {2} (4);
+	\path (2) edge node[draw=none, fill=none,below] {1} (4);
+	\path (3) edge node[draw=none, fill=none,above] {1} (5);
+	\path (4) edge node[draw=none, fill=none,above] {3} (6);
+	\path (5) edge node[draw=none, fill=none,above] {3} (7);
+	\path (5) edge node[draw=none, fill=none,below] {2} (8);
+	
+\end{tikzpicture}

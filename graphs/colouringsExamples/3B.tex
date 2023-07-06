@@ -1,0 +1,75 @@
+\begin{tikzpicture}[scale=0.8, every node/.style={draw,circle,very thick,fill=black}]
+
+
+\node (0) at (-1.6, 4.8) {};
+\node (1) at (0.75, 0.6) {};
+\node (2) at (-2.5, -1.2) {};
+\node (3) at (-2, 2.25) {};
+\node (4) at (-1.25, 1.2) {};
+\node (5) at (0.75, 1.9) {};
+\node (6) at (-3.2, -0.8) {};
+\node (7) at (-2, 0.2) {};
+\node (8) at (-4.8, 0) {};
+\node (9) at (-3, -2.4) {};
+\node (10) at (2.75, 0) {};
+\node (11) at (1.3, -2.4) {};
+\node (12) at (-3, 3.9) {};
+\node (13) at (-2.3, 3.2) {};
+\node (14) at (-0.2, 3.9) {};
+\node (15) at (-0.9, 3.2) {};
+\node (16) at (-1.6, 3.9) {};
+\node (17) at (-1.2, 2.25) {};
+\node (18) at (-1.8, -0.8) {};
+\node (19) at (-3, 0.2) {};
+\node (20) at (0.2, -0.8) {};
+\node (21) at (1.4, 0) {};
+\node (22) at (1.3, -0.8) {};
+\node (23) at (0.1, 0) {};
+
+\path[draw, thick]
+(0) edge (12) 
+(0) edge (14) 
+(0) edge (16) 
+(1) edge (5) 
+(1) edge (20) 
+(1) edge (22) 
+(2) edge (7) 
+(2) edge (9) 
+(2) edge (19) 
+(3) edge (7) 
+(3) edge (15) 
+(3) edge (16) 
+%(4) edge (5) 
+(4) edge[bend right=45] (19) 
+(4) edge (23) 
+(5) edge (17) 
+(6) edge (7) 
+(6) edge (8) 
+(6) edge (18) 
+(8) edge (9) 
+(8) edge (12) 
+(9) edge (11) 
+(10) edge (11) 
+(10) edge (14) 
+(10) edge (21) 
+(11) edge (22) 
+(12) edge (13) 
+(13) edge (15) 
+(13) edge (17) 
+(14) edge (15) 
+(16) edge (17) 
+(18) edge (19) 
+(18) edge (20) 
+(20) edge (21) 
+(21) edge (23) 
+(22) edge (23) 
+
+(4) edge  ++(0.8, 0.28)
+(5) edge ++ (-0.8, -0.28)
+
+;
+
+\node at (8) [draw=white,fill=white, minimum size=1.5em] {};
+
+
+\end{tikzpicture}

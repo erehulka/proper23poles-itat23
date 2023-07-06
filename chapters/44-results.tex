@@ -1,0 +1,103 @@
+\section{Theorems}\label{sec:result-theorems}
+
+Since when creating a proper (2,3)-pole from a snark, we are removing a vertex and severing an edge, we cannot look at the removable vertices \textit{per se} since only one vertex is removed. However, we may look at the end vertices of the severed edge. By doing that, we discover a first proposition about the uncolourability of proper (2,3)-poles. At first, it may be helpful to define what a submultipole is.
+
+\begin{definition}
+	Let $M$ and $N$ be multipoles. We say that $M$ is a submultipole of $N$, denoted by $M\subseteq N$ if a multipole $J$ exists such that $N$ is a partial junction of $M$ and $J$.
+\end{definition}
+
+In other words, $M$ is a submultipole of $N$ if it can be extended to it by adding vertices, edges and semiedges and connecting them. The following lemma applies to the colourings of submultipoles; thus is essential when proving some propositions in this chapter.
+
+\begin{lemma}
+	Let $M$ and $N$ be multipoles such that $M\subseteq N$. If $N$ is colourable, then $M$ is colourable as well.
+	\label{lem:submultipole-uncolourable}
+\end{lemma}
+
+\begin{proof}
+	Since $M\subseteq N$, so $N$ is a result of the junction of $M$ and some multipole $J$, there is an edge cut $X$ splitting $N$ into $M$ and $J$. Let $\phi$ be the colouring of $N$. After removing the edge cut $X$, the exact colouring can be applied to colour $M$.
+\end{proof}
+
+This also means that if $M$ is uncolourable, $N$ is uncolourable as well.
+
+Let $M$ and $N$ be multipoles, both constructed from a snark $G$. Since we often consider the intersection $E(M)\cap E(N)$, we clarify that:
+\begin{itemize}
+	\item A link $ab$ of $G$ is included in the intersection if and only if it is present in both multipoles.
+	\item A dangling edge originating from a vertex $a$ which originated from an edge $ab$ of $G$ is included in the intersection if and only if it is present in both multipoles.
+\end{itemize}
+
+\begin{proposition}
+	Let $G$ be a snark, $v$ its vertex, $ab$ its edge where $a\neq v$ and $b \neq v$ and $T(A,B)$ a proper (2,3)-pole $R(G;v;ab)$. If at least one of the pairs $\{v,a\}$ and $\{v,b\}$ is removable, then $T(A,B)$ is uncolourable.
+	\label{prop:uncolourable-vertices}
+\end{proposition}
+
+\begin{proof}
+	Let the removable pair be $\{v,a\}$, meaning that $R(G;\{v,a\};\emptyset)$ is uncolourable. We see that $R(G;\{v,a\};\emptyset)\subseteq T(A,B)$, so because of \cref{lem:submultipole-uncolourable} the proper (2,3)-pole $T(A,B)$ is uncolourable.
+\end{proof}
+
+It must be noted, though, that the converse implication does not hold. There are several uncolourable proper (2,3)-poles, resulting from a snark, in which both of the~pairs of vertices are unremovable. One of them is the mentioned example in \cref{fig:uncolourable-example}.
+
+Another interesting attribute in the question of colourability is the edge removability. Since the removed vertex in the creation of a proper $(2,3)$-pole has three neighbours, we can look at the removability of all three in pairs, along with the severed edge in the creation. One interesting proposition is also connected to the uncolourable proper (2,3)-poles.
+
+\begin{proposition}
+	Let $G$ be a snark, $v$ its vertex, $ab$ its edge where $a\neq v$ and $b \neq v$ and $T(A,B)$ a proper (2,3)-pole $R(G;v;ab)$. Let $x,y,z$ be the neighbouring vertices of $v$ in $G$. $T(A,B)$ is uncolourable if and only if all three pairs $\{ab,vx\}, \{ab,vy\}, \{ab,vz\}$ are removable.
+	\label{prop:uncolourable-all-pairs}
+\end{proposition}
+
+\begin{proof}
+	Suppose on the contrary that $T(A,B)$ is uncolourable and at least one pair from $\{ab,vx\}, \{ab,vy\}, \{ab,vz\}$ is unremovable, say $\{ab,vx\}$. This means that $R(G;\emptyset;\{ab,vx\})$ is colourable. However, $T(A,B)$ is a submultipole of $R(G;\emptyset;\{ab,vx\})$ and since $T(A,B)$ is uncolourable, $R(G;\emptyset;\{ab,vx\})$ must also be uncolourable because of \cref{lem:submultipole-uncolourable}, leading to a contradiction. Therefore, if $T(A,B)$ is uncolourable, all three pairs $\{ab,vx\}, \{ab,vy\}, \{ab,vz\}$ are removable.
+	
+	Now for the proof of the second implication, suppose that all three edge pairs are removable and $T(A,B)$ is colourable. Let the semiedge $b_1$ be from the dangling edge from $x$, $b_2$ from $y$ and $b_3$ from $z$. By the definition of colouring classes, it is evident that $T(A,B)$ must allow a colouring, among others, where the solitary semiedges are $a_1$~and some semiedge $b_i$, say $b_1$. It is now possible to use this colouring, say $\phi$, to colour $R(G;\emptyset;\{ab,vy\})$. Let us denote $R(G;\emptyset;\{ab,vy\})$ by $R$.
+	We define a colouring $\phi'$ of $R$ as follows: For each edge $e\in E(R)\cap E(T(A,B))$, the colour $\phi'(e)$ is equal to $\phi(e)$. The only edges not in this intersection are $vx,vz$ and the dangling edge from $v$, let us denote it by $d$. We can set $\phi'(vx)=\phi(b_1),~\phi'(vz)=\phi(b_3)$. These two colours are different, since in $\phi$ the semiedge $b_1$ is solitary and $b_3$ sociable. Thus we can colour the last edge, $d$, with the colour different from $\phi'(vx)$ and $\phi'(vz)$. Since $\{ab,vy\}$ is removable, $R$ is uncolourable, leading to a contradiction.
+\end{proof}
+
+Before the following proposition, we shall prove that for these pairs of edges, it cannot happen that exactly two are removable.
+
+\begin{lemma}
+	Let $G$ be a snark, $v$ its vertex, $ab$ its edge where $a\neq v$ and $b \neq v$. Let $x,y,z$ be the neighbouring vertices of $v$ in $G$. It is not possible that exactly two of the~pairs $\{ab,vx\}, \{ab,vy\}, \{ab,vz\}$ are removable.
+	\label{lem:not-2-removable}
+\end{lemma}
+
+\begin{proof}
+	We prove that if one of the pairs is unremovable, then at least one of the~remaining pairs is unremovable as well. Let $\{ab,vx\}$ be unremovable, meaning that $R=R(G;\emptyset;\{ab,vx\})$ is colourable, let the colouring be $\phi$. Let $a_1,a_2$ be the semiedges resulting from severing the edge $ab$ and $c_1,~ c_2$ from severing $vx$, such that $c_1$ is part of the edge from $x$ and $c_2$ of the edge from $v$. Because of the Parity Lemma and the fact that $G$ is a snark, $a_1$ must have a different colour than $a_2$, and $c_1,~ c_2$ must be coloured with the same colours as them, also different from each other. The colours in $\phi$ of edges incident with $v$ are all different, meaning that one of the edges, say $vy$, is coloured by the same colour as $c_1$. It cannot be the dangling edge, since $\phi(c_1)\neq \phi(c_2)$.
+	
+	Now we can colour $R'=R(G;\emptyset;\{ab,vy\})$ with a colouring $\phi'$. For each edge $e\in E(R)\cap E(R')$, $\phi'(e)=\phi(e)$. The only edges from $R'$ not in this intersection are the edge $vx$, the dangling edge from $y$ and the dangling edge from $v$. Let us denote the dangling edges by $d,~e$, respectively. We will colour them the following way: $\phi'(vx)=\phi(c_1),~\phi'(d)=\phi(vy),~\phi'(e)=\phi(c_2)$. Since $\phi(c_1)\neq \phi(c_2)$, all three colours of edges incident with $v$ in $\phi'$ will indeed be different. This means, that the pair $\{ab,vy\}$ is also unremovable.
+	
+	The statement that exactly two of the pairs $\{ab,vx\}, \{ab,vy\}, \{ab,vz\}$ are removable is equivalent to the statement that exactly one of them is unremovable. However, we have proved that this is impossible, since the presence of an unremovable pair implies the existence of another unremovable pair.
+\end{proof}
+
+\begin{proposition}
+	Let $G$ be a snark, $v$ its vertex, $ab$ its edge where $a\neq v$ and $b \neq v$ and $T(A,B)$ a proper $(2,3)$-pole $R(G;v;ab)$. Let $x,y,z$ be the neighbouring vertices of $v$ in $G$. The proper (2,3)-pole $T(A,B)$ is from the class 1A if and only if exactly one of the pairs $\{ab,vx\}, \{ab,vy\}, \{ab,vz\}$ is removable.
+	\label{prop:1A-one-pair}
+\end{proposition}
+
+\begin{proof}
+	Suppose that $T(A,B)$ is from the class $1A$ and not exactly one of the pairs $\{ab,vx\}, \{ab,vy\}, \{ab,vz\}$ is removable. If all three pairs were removable, then by \cref{prop:uncolourable-all-pairs}, $T(A,B)$ would be uncolourable. Also, there cannot be exactly two removable, as we have proved in \cref{lem:not-2-removable}. That means we can only explore the cases where none of the pairs is removable. Let the semiedge $b_1$ be from the dangling edge from $x$, $b_2$ from $y$ and $b_3$ from $z$.
+	
+	Let $T(A,B)$ allow a solitary cycle $a_1b_1a_2$, implying it allows a colouring where the~solitary semiedges are $a_1$ and $b_1$. Therefore $T(A,B)$ does not allow a colouring where one of the solitary semiedges is $b_2$ or $b_3$.
+	
+	Let $R=R(G;\emptyset;\{ab,vx\})$ and let us denote the semiedges resulting from severing the edge $vx$ by $c_1,c_2$, such that $c_1$ is part of the dangling edge from $x$ and $c_2$ of the~dangling edge from $v$. Since each pair is unremovable, a colouring $\phi$ of $R$ exists. We see that $\phi(vy)\neq \phi(vz)$ and $T(A,B)$ is a submultipole of $R$. We can now construct a colouring $\phi'$ of $T(A,B)$ the following way. For each edge $e\in E(T(A,B))\cap E(R)$, $\phi'(e)=\phi(e)$. The only edges from $T(A,B)$ not in this intersection are the dangling edges containing $b_2$ and $b_3$. We will colour them with $\phi'(b_2)=\phi(vy)$ and $\phi'(b_3)=\phi(vz)$. However, since $\phi(vy)\neq \phi(vz)$, the colour of $b_2$ is different from the colour of $b_3$, thus one of them is solitary in this colouring along with $a_1$ or $a_2$. This leads to a contradiction, since we suppose that $T(A,B)$ does not allow a colouring where one of the solitary semiedges is $b_2$ or $b_3$.
+	
+	Now we can prove the second implication. Assume that exactly one of the pairs $\{ab,vx\}, \{ab,vy\},\newline \{ab,vz\}$ is removable, let it be $\{ab,vx\}$, meaning that the pairs $\{ab,vy\}$ and $\{ab,vz\}$ are unremovable. As in the proof of the previous implication, let the semiedge $b_1$ be from the dangling edge from $x$, $b_2$ from $y$ and $b_3$ from $z$. Based on \cref{prop:uncolourable-all-pairs} $T(A,B)$ is colourable, so we can explore which semiedges from $b_1,b_2,b_3$ can be in its solitary cycle.
+	
+	Suppose $b_2$ is in the solitary cycle of $T(A,B)$, implying the existence of a colouring $\phi_2$ in which the solitary semiedges are $a_1$ and $b_2$. This would mean that $\phi_2(b_2)\neq \phi_2(b_1)$, $\phi_2(b_2)\neq \phi_2(b_3)$, $\phi_2(b_1)= \phi_2(b_3)$. From this colouring we can now construct a colouring $\phi_x$ of $R_x=R(G;\emptyset;\{ab,vx\})$: for each edge $e\in E(R_x)\cap E(T(A,B))$ the colour will be $\phi_x(e)=\phi_2(e)$. The only edges from $R_x$ not included in the intersection are $vy, vz$ and the dangling edge from $v$, let us denote it as $d$. We can then set $\phi_x(vy)=\phi_2(b_2), \phi_x(vz)=\phi_2(b_3)$ and $\phi_x(d)$ as the remaining colour, different from the~two colours already set for $vy$ and $vz$. Since $\{ab,vx\}$ is removable, the assumption that $b_2$ is in the solitary cycle leads to a contradiction.
+	
+	Now suppose $b_3$ is in the solitary cycle of $T(A,B)$, implying the existence of a~colouring $\phi_3$ in which the solitary semiedges are $a_1$ and $b_3$. This would mean that $\phi_3(b_3)\neq \phi_3(b_1)$, $\phi_3(b_3)\neq \phi_3(b_2)$, $\phi_3(b_1)= \phi_3(b_2)$. From this colouring we can now also construct a colouring $\phi_x$ of $R_x$ as before: for each edge $e\in E(R_x)\cap E(T(A,B))$ the~colour will be $\phi_x(e)=\phi_3(e)$. The only edges from $R_x$ not included in the intersection are $vy, vz$ and the dangling edge from $v$, let us denote it as $d$. We can then set $\phi_x(vy)=\phi_3(b_2), \phi_x(vz)=\phi_3(b_3)$ and $\phi_x(d)$ as the other colour from the two colours already set for $vy$ and $vz$. Since $\{ab,vx\}$ is removable, the assumption that $b_3$ is in the~solitary cycle also leads to a contradiction.
+	
+	Because $T(A,B)$ is colourable and as we have shown $b_2$ and $b_3$ cannot be in its solitary cycle, it must contain $b_1$, implying the existence of colouring where the solitary pairs are $a_1,a_2$; $a_1,b_1$; $a_2,b_2$; which coincides with the colouring class 1A.
+\end{proof}
+
+Based on this we can provide an interesting corollary for the other classes, implied by \cref{prop:uncolourable-all-pairs}, \cref{lem:not-2-removable} and \cref{prop:1A-one-pair}.
+
+\begin{corollary}
+	Let $G$ be a snark, $v$ its vertex, $ab$ its edge where $a\neq v$ and $b \neq v$ and $T(A,B)$ a proper $(2,3)$-pole $R(G;v;ab)$. Let $x,y,z$ be the neighbouring vertices of $v$ in $G$. $T(A,B)$ is perfect or from the class 2A, 2B or 3B, if and only if all three of the~pairs $\{ab,vx\}, \{ab,vy\}, \{ab,vz\}$ are unremovable.
+	\label{cor:all-3-unremovable}
+\end{corollary}
+
+\begin{proposition}
+	Let $G$ be a snark, $v$ its vertex, $ab$ its edge where $a\neq v, b \neq v$ and the~distance between $ab$ and $v$ is 1, that means $a$ or $b$ is a neighbour of $v$. Let $T(A,B)$ be a~proper $(2,3)$-pole $R(G;v;ab)$. Then $T(A,B)$ is either uncolourable or its colouring set is from the class 1A.
+	\label{prop:distance-one}
+\end{proposition}
+
+\begin{proof}
+	Since the distance between $ab$ and $v$ is 1, at least one of the vertices $a,b$ is the~neighbour of $v$; let it be $a$. Now there are two dangling edges from the vertex $a$; let their semiedges be $a_1$ and $b_1$. Because of this, in each colouring of $T(A,B)$, the colours of $a_1$ and $b_1$ are different. This means that $T(A,B)$ does not allow colourings where the solitary semiedges are $a_2$ with $b_2$, or $a_2$ with $b_3$. It is evident that the only possible colouring classes are 1A and uncolourable.
+\end{proof}

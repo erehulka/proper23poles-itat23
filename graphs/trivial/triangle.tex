@@ -1,0 +1,13 @@
+\begin{tikzpicture}[every node/.style={draw,circle,very thick, fill=black}]
+	
+	\graph[clockwise, radius=2cm, nodes={draw=none, fill=none}, edges={draw=none}, empty nodes] {subgraph C_n [n=3,name=B] };
+	
+	\graph[clockwise, radius=1cm, empty nodes] {subgraph C_n [n=3,name=A] };
+	
+	\foreach \i in {1,2,3}{
+		\draw (A \i) -- (B \i);
+	}
+
+	
+	
+\end{tikzpicture}

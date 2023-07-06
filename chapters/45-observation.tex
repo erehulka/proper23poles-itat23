@@ -1,0 +1,138 @@
+\section{Data and Observations}\label{sec:observations}
+
+To clarify how we got the propositions or how the data looks, we provide statistics about the explored snarks and their resulting proper (2,3)-poles. First, here is an example of the output table for the Petersen graph.
+
+\begin{table*}
+	\scalebox{0.8}{
+		\begin{tabular}{ |c|c|c|c|c|c|c| } 
+			\hline
+			graph6 & edge & vertex & colourings\_class & distance & removable\_vertices & removable\_edges \\  [0.5ex] 
+			\hline
+			\hline
+			MAMBHB@\_?OA?@??O? & 1, 5 & 0 & perfect & 2 & 0 & 0 \\ 
+			\hline
+			MAkBHB@\_?GA?@??O? & 1, 6 & 0 & 1A & 1 & 0 & 1 \\ 
+			\hline
+			\multicolumn{7}{|c|}{...} \\
+			\hline
+		\end{tabular}
+	}
+	\caption{Example of the output table}
+	\label{tab:example-of-output}
+\end{table*}
+
+As an input, we have used all snarks with a girth at least five and at most 28 vertices, which is 3,247 snarks. There are precisely 3,476,400 proper (2,3)-poles resulting from them. Most of these results are perfect proper (2,3)-poles. The proportions are in \cref{tab:proportion}.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ |c|c|c| } 
+		\hline
+		class & percentage & total number \\ [0.5ex] 
+		\hline\hline
+		perfect & $66.13\%$ & 2,299,022 \\ 
+		\hline
+		1A & $20.73\%$ & 720,660 \\ 
+		\hline
+		uncolourable & $8.59\%$ & 298,720 \\ 
+		\hline
+		2B & $3.2\%$ & 111,139 \\ 
+		\hline
+		3B & $0.68\%$ & 23,630 \\ 
+		\hline
+		2A & $0.67\%$ & 23,229 \\ 
+		\hline
+	\end{tabular}
+	\caption{Proportion of colouring classes in explored proper (2,3)-poles}
+	\label{tab:proportion}
+\end{table}
+
+
+By analyzing proper (2,3)-poles, we found that $8.59\%$ of them are uncolourable, while $91.41\%$ are colourable. Based on \cref{cor:all-3-unremovable} and its converse implication, we examined the distribution of colouring classes when all of the mentioned pairs are unremovable. This analysis led to the observations presented in \cref{tab:proportion-all-unremovable}. We see that most of the proper (2,3)-poles are perfect, but the numbers are also the same as in \cref{tab:proportion}. The equivalence between all proper (2,3)-poles from the classes perfect, 2B, 3B and 2A; and having all three pairs of edges unremovable is proved in \cref{cor:all-3-unremovable}.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ |c|c|c| } 
+		\hline
+		class & percentage & total number \\ [0.5ex] 
+		\hline\hline
+		perfect & $93.57\%$ & 2,299,022 \\ 
+		\hline
+		2B & $4.52\%$ & 111,139 \\ 
+		\hline
+		3B & $0.96\%$ & 23,630 \\ 
+		\hline
+		2A & $0.95\%$ & 23,229 \\ 
+		\hline
+	\end{tabular}
+	\caption{Proportion of colouring classes for all three unremovable pairs of edges}
+	\label{tab:proportion-all-unremovable}
+\end{table}
+
+Another interesting observation is that no proper (2,3)-pole from the explored ones has precisely two of the mentioned pair of edges removable. We have proved this in \cref{lem:not-2-removable}. The proportions can be seen in \cref{tab:removable-edges}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ |c|c|c| } 
+		\hline
+		removable edges & percentage & total number \\ [0.5ex] 
+		\hline\hline
+		0 & $70.68\%$ & 2,457,020 \\ 
+		\hline
+		1 & $20.73\%$ & 720,660 \\ 
+		\hline
+		3 & $8.59\%$ & 298,720 \\ 
+		\hline
+	\end{tabular}
+	\caption{Proportion of number of removable edges}
+	\label{tab:removable-edges}
+\end{table}
+
+A snark is \textit{critical} if every pair of its distinct adjacent vertices is unremovable. Similarly, a snark is \textit{cocritical} if every pair of its distinct nonadjacent vertices is unremovable. If a snark is both critical and cocritical, then we say that G is \textit{bicritical} \cite{Nedela1996}. In other words, a snark is bicritical if every pair of its distinct vertices is unremovable.
+
+Among the 3,247 explored snarks, only five produce only colourable proper\linebreak (2,3)-poles. One is the Petersen graph, then one with 20 vertices, two with 22 and one with 28 vertices. The ones with 20 and 28 vertices are the Isaacs snarks $J_5$ and $J_7$ respectively. The two snarks with 22 vertices are the Loupekine snarks. Because of \cref{prop:uncolourable-vertices}, each of the five mentioned snarks is bicritical.
+
+Now we can take a look at the bicritical snarks. We have explored each nontrivial bicritical snark with at most 32 vertices -- precisely 278 of them. There are 306,396 proper (2,3)-poles resulting from them. The proportions of their colouring classes is in \cref{tab:proportion-bicritical}.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ |c|c|c| } 
+		\hline
+		class & percentage & total number \\ [0.5ex] 
+		\hline\hline
+		perfect & $79.24\%$ & 242,784 \\ 
+		\hline
+		1A & $19.85\%$ & 60,830 \\ 
+		\hline
+		uncolourable & $0.59\%$ & 1,802 \\ 
+		\hline
+		2A & $0.32\%$ & 968 \\ 
+		\hline
+		3B & $0.00\%$ & 10 \\ 
+		\hline
+		2B & $0.00\%$ & 2 \\ 
+		\hline
+	\end{tabular}
+	\caption{Proportion of colouring classes in explored proper (2,3)-poles from bicritical snarks}
+	\label{tab:proportion-bicritical}
+\end{table}
+
+As before, we can look at the proportions of the colouring classes, but only for the~proper (2,3)-poles with all three of the mentioned edge pairs unremovable. The results are in \cref{tab:proportion-bicritical-all-unremovable}. We see, that almost every such proper (2,3)-pole is perfect, however there is a small number of ones from the classes 2A, 3B, 2B. This may be an interesting observation for the further research about the sufficient conditions for a proper (2,3)-pole resulting from a bicritical snark to be perfect.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ |c|c|c| } 
+		\hline
+		class & percentage & total number \\ [0.5ex] 
+		\hline\hline
+		perfect & $99.6\%$ & 242,784 \\ 
+		\hline
+		2A & $0.4\%$ & 968 \\ 
+		\hline
+		3B & $0.00\%$ & 10 \\ 
+		\hline
+		2B & $0.00\%$ & 2 \\ 
+		\hline
+	\end{tabular}
+	\caption{Proportion of colouring classes for all three unremovable pairs of edges in proper (2,3)-poles from bicritical snarks}
+	\label{tab:proportion-bicritical-all-unremovable}
+\end{table}

@@ -1,0 +1,22 @@
+\begin{tikzpicture}[every node/.style={draw,circle,very thick, fill=black}]
+	
+	\node[draw=none, fill=none] (1) at (0,0) {};
+	\node (2) at (1,0) {};
+	\node (3) at (4,0) {};
+	\node[draw=none, fill=none] (4) at (5,0) {};
+	
+	\path (1) edge (2);
+	\path (2) edge[bend left] (3);
+	\path (2) edge[bend right] (3);
+	\path (3) edge (4);
+	
+	\node[draw=none, fill=none] (arrow) at (7, 0) {$\rightarrow$};
+	
+	\node[draw=none, fill=none] (5) at (9,0) {};
+	\node[draw=none, fill=none] (6) at (14,0) {};
+	
+	\path (5) edge (6);
+	
+	
+	
+\end{tikzpicture}

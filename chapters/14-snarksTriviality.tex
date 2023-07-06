@@ -1,0 +1,52 @@
+\section{Triviality of Snarks}\label{sec:snarks-triviality}
+
+As mentioned earlier, some authors use the term \quotes{nontrivial} when defining snarks. One of the attributes linked to the triviality of snarks is the containment of a digon, a graph with two vertices connected by two edges. Consider a graph $G$ with a digon. Let $G'$~be a~graph obtained by removing the digon, as shown in \cref{fig:trivial-digon}. The graph $G$ is colourable if and only if $G'$ is colourable.
+
+\begin{figure}
+	\centering
+	\input{graphs/trivial/digon.tex}
+	\caption{Replacement of a digon in a snark}
+	\label{fig:trivial-digon}
+\end{figure}
+
+ If a cubic graph $G$ contains a triangle, it can be replaced with a single vertex resulting in a smaller graph $G'$ as visualised in \cref{fig:trivial-triangle}. As with digons, $G$ is colourable if and only if $G'$ is colourable.
+ 
+ \begin{figure}
+ 	\centering
+ 	\begin{subfigure}{0.4\textwidth}
+ 		\raggedleft
+ 		\input{graphs/trivial/triangle.tex}
+ 	\end{subfigure}
+ 	\hfill
+ 	\begin{subfigure}{0.1\textwidth}
+ 		\centering
+ 		$\rightarrow$
+ 		\newline\newline
+ 	\end{subfigure}
+ 	\hfill
+ 	\begin{subfigure}{0.4\textwidth}
+ 		\raggedright
+ 		\input{graphs/trivial/triangleAfter.tex}
+ 	\end{subfigure}
+ 	\caption{Replacement of a triangle in a snark}
+ 	\label{fig:trivial-triangle}
+ \end{figure}
+
+A less evident attribute could be the containment of a quadrilateral in a graph $G$. As shown in \cref{fig:trivial-quadrilateral}, it can be replaced with two edges, resulting in a graph $G'$. If $G'$ is colourable, $G$ is also colourable. It must be noted, though, that the converse implication does not hold. In general, based on these three attributes, we can mark snarks containing digons, triangles or quadrilaterals as trivial.
+
+\begin{figure}
+	\centering
+	\input{graphs/trivial/quadriliteral.tex}
+	\caption{Replacement of a quadrilateral in a snark}
+	\label{fig:trivial-quadrilateral}
+\end{figure}
+
+As mentioned before, a cubic graph with a bridge is uncolourable. If a graph has cyclic edge connectivity 1, it is clear that it has a bridge, thus, is uncolourable. Because of that, we consider the cubic graphs with cyclic edge connectivity 1 as trivial snarks. Now let us consider a snark $G$ with cyclic edge connectivity 2. That means it has a~2-edge-cut, decomposing it into two 2-poles, $M$ and $N$. We show that at least one of them is uncolourable. Suppose that both are colourable. Because of the Parity Lemma, both semiedges in $M$ and $N$ have the same colour, so after the junction of $S(M)$ and $S(N)$, we obtain $G$, which would be colourable and that is impossible. Therefore at least one of them is uncolourable, which means we can obtain a new smaller snark by the junction of the two semiedges in the uncolourable 2-pole.
+
+Assume that a snark $G$ has cyclic edge connectivity $3$. As before, at least one of the components $M, N$ obtained by severing the edges in the 3-edge-cut of $G$ must be uncolourable, otherwise, all three semiedges of $M$ and $N$ would have three different colours because of the Parity Lemma, and thus the colouring of $G$ could be obtained. This means that we can construct a smaller snark by joining the semiedges of the~uncolourable component in a new vertex.
+
+In our work, a snark is considered trivial if a new smaller snark can be obtained using one of the methods mentioned above in this chapter. Now we can adequately define when a snark is nontrivial.
+
+\begin{definition}
+	A snark is called \textit{nontrivial} if it has girth at least five and is cyclically 4-edge-connected. Otherwise, it is called \textit{trivial}.
+\end{definition}

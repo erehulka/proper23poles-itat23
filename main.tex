@@ -1,0 +1,90 @@
+%% The first command in your LaTeX source must be the \documentclass command.
+%%
+%% Options:
+%% twocolumn : Two column layout.
+%% hf: enable header and footer.
+\documentclass[
+twocolumn,
+% hf,
+]{ceurart}
+
+%%
+%% One can fix some overfulls
+\sloppy
+
+%%
+%% Minted listings support 
+%% Need pygment <http://pygments.org/> <http://pypi.python.org/pypi/Pygments>
+\usepackage{listings}
+%% auto break lines
+\lstset{breaklines=true}
+
+%%
+%% end of the preamble, start of the body of the document source.
+\input definitions.tex
+\begin{document}
+
+%%
+%% Rights management information.
+%% CC-BY is default license.
+\copyrightyear{2022}
+\copyrightclause{Copyright for this paper by its authors.
+  Use permitted under Creative Commons License Attribution 4.0
+  International (CC BY 4.0).}
+
+%%
+%% This command is for the conference information
+\conference{ITAT’23: Information technologies -- Applications and Theory, September 22–26, 2023, Tatranské Matliare, Slovakia}
+
+%%
+%% The "title" command
+\title{Analysis of colouring properties of proper (2, 3)-poles}
+
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+\author[1]{Erik Řehulka}[%
+email=rehulka3@uniba.sk,
+]
+\address[1]{Comenius University, Mlynská dolina, 842 48 Bratislava, Slovakia}
+
+\author[1]{Jozef Rajník}[%
+email=jozef.rajnik@fmph.uniba.sk,
+]
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+  Snark is a bridgeless undirected cubic graph whose edges cannot be coloured with three colours so that no two adjacent edges have the same colour. Sometimes, we do not require each edge to be incident with precisely two vertices but instead, allow even one or none. Structures allowing this are called multipoles and can be joined together through junctions, forming larger multipoles and even graphs. In our work, we explore the colouring properties of proper (2,3)-poles, a specific type of multipole with five dangling edges, that is edges that are incident with only one vertex. They result from snarks by removing a vertex and severing an edge, not incident with the removed vertex. To conduct our analysis, we explore all proper (2,3)-poles resulting from nontrivial snarks with girth at least five and with at most 28 vertices. This encompasses a~total of 3,247 snarks and 3,476,400 proper (2,3)-poles. In our research, we provide various structures that can be utilized to expand the colourability of proper (2,3)-poles. In the core of our work, we provide theorems regarding the colouring properties of proper (2,3)-poles, specifically necessary and sufficient conditions for these properties. Additionally, we present the data and observations from the analysis, along with some problems for further research.
+\end{abstract}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\begin{keywords}
+	snark \sep 
+	multipole \sep 
+	edge-colouring \sep 
+	Tait colouring \sep 
+	colouring set
+\end{keywords}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\input chapters/00-introduction.tex
+\input chapters/10-multipolesAndSnarks.tex 
+\input chapters/20-proper23poles.tex
+\input chapters/40-ourWork.tex
+%\input chapters/90-conclusion.tex
+
+\bibliography{references}
+
+\end{document}
+
+%%
+%% End of file

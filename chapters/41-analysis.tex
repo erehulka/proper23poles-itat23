@@ -1,0 +1,20 @@
+\section{Methods of Analysis}\label{sec:analysis}
+
+All of the results in this chapter come from our analysis conducted on several proper (2,3)-poles. For this reason, we have created a simple program in \texttt{C++} that helps us get the desired results. The logic behind representing graphs in the program and some basic operations on them is done by the \texttt{ba\_graph} library \cite{ba-graph}. As input, it receives a~list of snarks in graph6 format \cite{mckay_formats}, parses them, and performs the following operations on each.
+
+Since the proper (2,3)-poles are multipoles resulting from a snark by removing one vertex and severing one edge, this is exactly what the program does: for each vertex~$v$ and edge~$e$, where $e$ is not incident with $v$, it removes $v$, severes $e$, and thus creates a~proper (2,3)-pole. Thus, we have multiple proper (2,3)-poles from one snark.
+
+Let $T$ be the proper (2,3)-pole resulting from snark $G$, after removing the vertex $v$ and severing the edge $xy$, $x\neq y\neq v\neq x$. We compute or observe the following properties for each proper (2,3)-pole:
+
+\begin{itemize}
+	\item the resulting multipole in graph6 format;
+	\item which edge and vertex were removed from the former snark;
+	\item in which colouring class it is (see \cref{sec:colouring-classes});
+	\item the distance between the removed vertex and severed edge;
+	\item how many pairs of vertices from $\{v,x\},\{v,y\}$ are removable;
+	\item how many pairs of edges $\{xy, va\}, \{xy, vb\}, \{xy, vc\}$ are removable, where $a,b,c$ are neighbours of $v$.
+\end{itemize}
+
+For each graph on input, these results are then saved in a separate file containing a~row for each proper (2,3)-pole originating from it.
+
+The source code of the program can be found at\newline \url{https://github.com/erehulka/proper-2-3-poles}.

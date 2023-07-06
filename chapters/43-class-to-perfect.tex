@@ -1,0 +1,72 @@
+\section{Obtaining perfect proper (2,3)-poles}\label{sec:classes-to-perfect}
+
+It may be convenient to modify some proper (2,3)-poles by adding some vertices and edges to obtain perfect proper (2,3)-pole. If we know in which colouring class the proper (2,3)-pole is, then we can make a junction with the specific constructions provided in this chapter to obtain perfect colouring, of course, only if the former (2,3)-pole is colourable. 
+
+\subsection{Extending class 1A to 2B}
+
+Let $T(A,B)$ be a proper (2,3)-pole, whose colouring class is 1A and let it allow a solitary cycle $b_ia_1a_2$ for some $b_i\in B$. Now let $T'(A,B')$, $B'=(b'_1, b'_2, b'_3)$ be a proper (2,3)-pole obtained by the partial junction of $T$ with the 6-pole $M$ shown in \cref{fig:1A2B}. In this partial junction we connect the connector $B$ and the connector $(c_1,c_2,c_3)$ such that it contains a junction of $b_i$ and $c_1$. We prove that the result is a proper (2,3)-pole from colouring class 2B, which allows solitary cycle $b'_2a_1b'_3a_2$.
+
+\begin{proof}
+	Without loss of generality, let the semiedge $b_i$ be $b_1$. Let this colouring of $T$ be $\phi$. As can be seen in \cref{fig:1A2BCol}, using colourings of $M$ $\phi_1$ where $\phi_1(b'_1,b'_2,b'_3)=(3,3,2)$ and $\phi_2$ where $\phi_2(b'_1,b'_2,b'_3)=(3,2,3)$, in both cases $\phi_1(c_1,c_2,c_3)=\phi_2(c_1,c_2,c_3)=(2,1,1)$. After the mentioned partial junction of $T$ and $M$, we can colour the rest of $T'$ by the~colouring $\phi$. We can see that the colouring graph of $T'$ allows a solitary cycle $b'_2a_1b'_3a_2$. No more colourings can be obtained since, as it can be seen, $b'_2$ and $b'_3$ must have different colours, so one of them is always solitary and we cannot obtain classes $2A,3B$, and perfect.
+\end{proof}
+
+\begin{figure}[h]
+	\centering
+	\input{graphs/classToPerfect/1A2B.tex}
+	\caption{6-pole used to create colouring class 2B from 1A}
+	\label{fig:1A2B}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\input{graphs/classToPerfect/1A2BColouring1.tex}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\input{graphs/classToPerfect/1A2BColouring2.tex}
+	\end{subfigure}
+	\caption{Colourings of the 6-pole used to extend class 1A to 2B}
+	\label{fig:1A2BCol}
+\end{figure}
+
+It is the smallest such 6-pole, considering the number of vertices, which extends class 1A to 2B. On zero vertices the only possibility are three isolated edges, which, as it can be checked, do not extend the colouring. It is not possible to get a 6-pole on one vertex, thus two vertices are the minimal amount.
+
+\subsection{Extending class 2B to 2A}
+
+Let $T(A,B)$ be a proper (2,3)-pole whose colouring class is 2B. Let $b_i,b_j,i\neq j$ be the two semiedges from $B$, for which there exists a solitary cycle $a_1b_ia_2b_j$. Now let $T'(A,B')$, $B'=(b'_1, b'_2, b'_3)$ be a proper (2,3)-pole obtained by the partial junction of $T$ with the 6-pole on \cref{fig:multiple} by the junction of semiedges $b_i$ to $c_1$, $b_j$ to $c_2$ and the last semiedge to $c_3$. The result $T'$ is from a colouring class $2A$ and allows solitary cycle $a_1b'_1a_2b'_2a_2$. The proof is similar to the one in extending class 1A to 2B.
+
+\begin{proof}
+	Without loss of generality, let $b_i,b_j$ be $b_1,b_2$ respectively. Let us denote the structure in  \cref{fig:multiple} as $M$. If we order the semiedges of $M$ as $(c_1,c_2,c_3,b'_1,b'_2,b'_3)$, we see that its colouring set contains among others the colourings $(2,1,1,2,1,1), (1,2,1,1,2,1), \newline (2,1,1,2,2,2)$, thus after the mentioned junction we can colour the result in a way that the solitary cycle will be $a_1b'_1a_2a_1b'_2a_2$.
+	
+	Let's say we would want the solitary cycle of the result to contain $b'_3$ as well, in a colouring $\phi$. This would mean that $\phi(b'_1)=\phi(b'_2)$, and both are not equal to $\phi(b'_3)$. However, as it can be checked, the colours of the resulting semiedges would be unambiguously set as $\phi(c_1)=\phi(c_2)=\phi(b'_1)=\phi(b'_2)$ and $\phi(c_3)=\phi(b'_3)$. Since we perform the junction as explained above, $b_3$ has to be contained in the solitary cycle of $T(A,B)$, which is false. This means that we can't obtain the class 3B nor the perfect colouring.
+\end{proof}
+
+\begin{figure}[h]
+	\centering
+	\input{graphs/classToPerfect/multiple.tex}
+	\caption{6-pole used to extend multiple colouring classes}
+	\label{fig:multiple}
+\end{figure}
+
+It must be noted that this construction produces proper (2,3)-poles which may not be contained in a nontrivial snark, since it contains a quadrilateral. If we would need to extend some proper (2,3)-pole to obtain a specific colouring class and require the~extended proper (2,3)-pole to be contained in a nontrivial snark, we would need to use other, more complex constructions.
+
+\subsection{Extending proper (2,3)-poles from class 2A to perfect}
+
+To extend a proper (2,3)-pole from the colouring class 2A to a perfect one, the same 6-pole can be used as before, just with a different junction. Let $T(A,B)$ be a proper (2,3)-pole whose colouring class is 2B. Let $b_i,b_j,i\neq j$ be the two semiedges from $B$, for which there exists a solitary cycle $a_1b_ia_2a_1b_ja_2$. Now let $T'(A,B')$, $B'=\{b'_1, b'_2, b'_3\}$ be a proper (2,3)-pole obtained by the junction of $T$ with the 6-pole in \cref{fig:multiple} by the~junction of semiedges $b_i$ to $c_2$, $b_j$ to $c_3$ and the last semiedge to $c_1$. The result $T'$ is a~perfect proper (2,3)-pole, which can be proved similarly to before.
+
+\begin{proof}
+	Let $b_i,b_j$ be $b_1,b_2$ respectively, so in the junction we connect $b_1$ to $c_2$ and $b_2$ to $c_3$. Let us denote the structure in  \cref{fig:multiple} as $M$. If we order the semiedges of $M$ as $(c_1,c_2,c_3,b'_1,b'_2,b'_3)$, we see that its colouring set contains the colourings $(2,1,2,1,2,2), (2,1,2,2,1,2), (2,2,1,2,2,1), (2,2,2,2,2,2)$, thus after the mentioned junction we can colour the result in a way that it will be perfect.
+\end{proof}
+
+\subsection{Extending proper (2,3)-poles from class 3B to perfect}
+
+Let $T(A,B)$ be a proper (2,3)-pole whose colouring class is 3B. Let $T'(A,B')$, \linebreak ${B'=(b'_1, b'_2, b'_3)}$ be a proper (2,3)-pole obtained by the partial junction of $T$ with the 6-pole on \cref{fig:multiple}, performing the junction of $B$ to $(c_1,c_2,c_3)$. Then $T'$ is perfect, which can be proved similarly to before.
+
+\begin{proof} 
+	Let us denote the structure in  \cref{fig:multiple} as $M$. If we order the semiedges of $M$ as $(c_1,c_2,c_3,b'_1,b'_2,b'_3)$, we see that its colouring set contains the colourings $(2,1,2,1,2,2), (2,1,2,2,1,2), (2,2,1,2,2,1), (2,1,1,2,2,2)$, thus after the mentioned junction we can colour the result in a way that it will be perfect.
+\end{proof}
+
+It is possible to incrementally modify each colourable proper (2,3)-pole to obtain a perfect one. For example, from class 1A it is possible to get class 2B, then 2A and finally perfect. It is evident that extending uncolourable multipoles to obtain colourable is impossible.
