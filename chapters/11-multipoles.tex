@@ -4,13 +4,11 @@ All graphs considered in this work are undirected, and while we permit multiple 
 
 The distance between two vertices $x$ and $y$ in a graph $G$, denoted by $d_G(x,y)$, is defined as the length of the shortest path between $x$ and $y$ in $G$. If no such path exists, we set $d_G(x,y)=\infty$. For a vertex $x$ and an edge $ab$ in $G$, the distance is defined as the~smallest value between $d_G(x,a)$ and $d_G(x,b)$.
 
-A \textit{multipole} is a pair $M=(V,E)$ of distinct finite sets of vertices $V$ and edges $E$, where every edge $e\in E$ has two edge ends, which may or need not be incident with a vertex. We denote the set of its semiedges as $S(M)$.
+A \textit{multipole} is a pair $M=(V,E)$ of distinct finite sets of vertices $V$ and edges $E$, where every edge $e\in E$ has two edge ends, which may or need not be incident with a vertex. The edge ends not incident with any vertex are called \textit{semiedges}. We denote the set of its semiedges as $S(M)$.
 
 A multipole $M$ with $S(M) = (a_1, \cdots, a_n)$ can also be denoted as $M(a_1,\cdots,a_n)$. The \textit{order} of a multipole $M$, denoted by $|M|$, is the number of its vertices. The \textit{degree} of a vertex $v$ of a multipole, denoted by $\deg(v)$, is the number of edge ends incident with $v$. In our work, we will consider \textit{cubic} multipoles, i.e. multipoles where every vertex has degree $3$. 
 
 A multipole with $k$ semiedges is usually called a \textit{k-pole}. Based on this definition, it is possible to define a graph as a multipole without semiedges, or more precisely, a~\textit{0-pole}.
-
-One of the features of multipoles is connecting them to form bigger multipoles or even graphs. They can be seen as small building blocks for constructing larger graphs or multipoles. For this case, dividing $S(M)$ into pairwise disjoint tuples called connectors is convenient.
 
 \begin{definition}
 	Let $M$ be a multipole. Parts of the partition of $S(M)$ into pairwise disjoint tuples $S_1,\cdots, S_n$ are called \textit{connectors}.

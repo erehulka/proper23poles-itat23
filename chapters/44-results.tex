@@ -1,7 +1,5 @@
 \section{Theorems}\label{sec:result-theorems}
 
-Since when creating a proper (2,3)-pole from a snark, we are removing a vertex and severing an edge, we cannot look at the removable vertices \textit{per se} since only one vertex is removed. However, we may look at the end vertices of the severed edge. By doing that, we discover a first proposition about the uncolourability of proper (2,3)-poles. At first, it may be helpful to define what a submultipole is.
-
 \begin{definition}
 	Let $M$ and $N$ be multipoles. We say that $M$ is a submultipole of $N$, denoted by $M\subseteq N$ if a multipole $J$ exists such that $N$ is a partial junction of $M$ and $J$.
 \end{definition}
@@ -24,6 +22,8 @@ Let $M$ and $N$ be multipoles, both constructed from a snark $G$. Since we often
 	\item A link $ab$ of $G$ is included in the intersection if and only if it is present in both multipoles.
 	\item A dangling edge originating from a vertex $a$ which originated from an edge $ab$ of $G$ is included in the intersection if and only if it is present in both multipoles.
 \end{itemize}
+
+Since when creating a proper (2,3)-pole from a snark, we are removing a vertex and severing an edge, we cannot look at the removable vertices \textit{per se} since only one vertex is removed. However, we may look at the end vertices of the severed edge.
 
 \begin{proposition}
 	Let $G$ be a snark, $v$ its vertex, $ab$ its edge where $a\neq v$ and $b \neq v$ and $T(A,B)$ a proper (2,3)-pole $R(G;v;ab)$. If at least one of the pairs $\{v,a\}$ and $\{v,b\}$ is removable, then $T(A,B)$ is uncolourable.
