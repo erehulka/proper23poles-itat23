@@ -4,19 +4,7 @@ All graphs considered in this work are undirected, and while we permit multiple 
 
 The distance between two vertices $x$ and $y$ in a graph $G$, denoted by $d_G(x,y)$, is defined as the length of the shortest path between $x$ and $y$ in $G$. If no such path exists, we set $d_G(x,y)=\infty$. For a vertex $x$ and an edge $ab$ in $G$, the distance is defined as the~smallest value between $d_G(x,a)$ and $d_G(x,b)$.
 
-In our work, we allow a specific modification of graphs, where the ends of its edges may not be incident with a vertex, resulting in a graph with dangling edges. Such structures are called multipoles.
-
-\begin{definition}
-	A \textit{multipole} is a pair $M=(V,E)$ of distinct finite sets of vertices $V$ and edges $E$, where every edge $e\in E$ has two edge ends, which may or need not be incident with a vertex.
-	
-	According to the incidence of edge ends, we define four types of edges:
-	\begin{enumerate}[nolistsep]
-		\item A \textit{link} is an edge whose ends are incident with two distinct vertices.
-		\item A \textit{dangling edge} is an edge whose one end is incident with a vertex, and the other is not.
-	\end{enumerate}
-\end{definition}
-
-Loops are not allowed in our work, although, for the sake of a complete definition, they are included in the types of edges. A \textit{semiedge} is an edge end not incident with any vertex. For a given multipole $M$, we define $S(M)$ to be the tuple containing all the semiedges in that multipole.
+A \textit{multipole} is a pair $M=(V,E)$ of distinct finite sets of vertices $V$ and edges $E$, where every edge $e\in E$ has two edge ends, which may or need not be incident with a vertex. We denote the set of its semiedges as $S(M)$.
 
 A multipole $M$ with $S(M) = (a_1, \cdots, a_n)$ can also be denoted as $M(a_1,\cdots,a_n)$. The \textit{order} of a multipole $M$, denoted by $|M|$, is the number of its vertices. The \textit{degree} of a vertex $v$ of a multipole, denoted by $\deg(v)$, is the number of edge ends incident with $v$. In our work, we will consider \textit{cubic} multipoles, i.e. multipoles where every vertex has degree $3$. 
 
