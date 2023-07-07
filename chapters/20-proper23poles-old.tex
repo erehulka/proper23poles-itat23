@@ -1,6 +1,8 @@
 \section{Proper (2,3)-poles}\label{ch:proper-23-poles}
 
-A snark can be constructed from a proper (2,3)-pole by the junction of the semiedges in the connector of size two and joining the semiedges from the connector of size three to a new vertex. It can be proved, that since they are proper, the result is a snark. Conversely for each snark, the result after removing a vertex and severing an edge not incident with it will always be a proper (2,3)-pole.
+We can easily construct a snark from a proper (2,3)-pole by the~junction of the semiedges in the connector of size two and joining the semiedges from the connector of size three to a new vertex, creating an edge and a vertex, respectively. Since they are proper, the result is a snark because there is no Tait colouring, where the edges joined in the new vertex would have all different colours. Similarly, proper (2,3)-poles do not allow Tait colourings, in which the semiedges in the connector of size 2 have the same colour.
+
+Thus if we take a cubic graph $G$, remove its vertex $v$ and sever its edge $ab$, which is not incident with $v$, and the result is a proper (2,3)-pole, then $G$ must be a snark. It is also true the other way: for each snark, the result after removing a vertex and severing an edge not incident with it will always be a proper (2,3)-pole.
 
 By default, when we get a proper (2,3)-pole in this way, we denote it by $T(A,B)$, where the connector $A$ contains the two semiedges resulting from severing the edge and similarly, connector $B$ contains the three semiedges resulting from removing the vertex, such that $A=(a_1,a_2)$ and $B=(b_1,b_2,b_3)$. An example can be seen in \cref{fig:23-pole-example}.
 
@@ -11,7 +13,7 @@ By default, when we get a proper (2,3)-pole in this way, we denote it by $T(A,B)
 	\label{fig:23-pole-example}
 \end{figure*}
 
-To explore multipoles effectively, we start with simpler cases and gradually move towards more complex ones. We begin by examining $k$-poles, starting from the smallest $k$ of interest, which is 4. The~1-poles are trivially uncolourable, while the colourability of 2-poles and 3-poles is limited due to the Parity Lemma. For a 2-pole to be colourable, both of its semiedges must have the same colour. Similarly, for a 3-pole, all three of its semiedges must have pairwise different colours. The colouring properties of $4$-poles are already widely explored since their colouring properties are limited as well \cite{ChladnyFactorisation}. That is why we have moved to explore $5$-poles. It can be proven that if we get two colourable $5$-poles by severing five edges in a given snark, they can be only one of three types: negators, superpentagons and proper $(2,3)$-poles. For the first two, their colouring properties are already explored, which is why we chose to explore the last type.
+To explore multipoles effectively, it is best to start with the simplest ones and gradually move towards more complex ones. That's why we begin by examining the $k$-poles starting from the smallest $k$. Specifically, the smallest $k$ for which it is interesting to explore the colourability of $k$-poles arising from snarks with $k$-edge-cuts is 4. The~1-poles are trivially uncolourable, while the colourability of 2-poles and 3-poles is limited due to the Parity Lemma. For a 2-pole to be colourable, both of its semiedges must have the same colour. Similarly, for a 3-pole, all three of its semiedges must have pairwise different colours. Also, the colouring properties of $4$-poles are already widely explored since their colouring properties are limited as well \cite{ChladnyFactorisation}. That is why we have moved to explore $5$-poles. It can be proven that if we get two colourable $5$-poles by severing five edges in a given snark, they can be only one of three types: negators, superpentagons and proper $(2,3)$-poles. For the first two, their colouring properties are already explored, which is why we chose to explore the last type.
 
 By applying the knowledge about the multipoles being proper and the Parity lemma, it is clear that the colouring set of each proper (2,3)-pole is a subset of the set
 
@@ -29,6 +31,8 @@ A proper (2,3)-pole is called \textit{perfect} if its colouring set coincides wi
 
 Another corollary of the Parity Lemma may be that for each 5-pole $M$ to be colourable, it needs to have three semiedges of one colour and the other two with a different colour each. The three semiedges coloured by the same colour in $\phi$ are called \textit{sociable} in $\phi$, and the other two coloured by a colour different from the others are called \textit{solitary} in $\phi$.
 
+There may seem to be many possible colourings of proper (2,3)-poles, as, in theory, each subset of C represents a different colouring set. However, we will show that not each of these subsets can be attained.
+
 Let $M$ be a multipole, $\phi_1$ and $\phi_2$ colourings of $M$ such that $\phi_1$ uses $C=\{c_1,c_2,c_3\}$ as the set of colours and $\phi_2$ uses $D=\{d_1,d_2,d_3\}$. We say that $\phi_1$ and $\phi_2$ are \textit{isomorphic} if there exists a bijection $f\colon C\rightarrow D$ and for each edge $e$ from $E(M)$ $\phi_2(e)=f(\phi_1(e))$.
 
 Let $T$ be any proper (2,3)-pole. First, we can see that because of colouring isomorphism, if one colouring can be attained, then the colouring set of $T$ must contain this colouring along with all possible isomorphic colourings to the first one. Also, we can get a new colouring using the interchange of colours on a chain.
@@ -42,9 +46,11 @@ Let $T$ be any proper (2,3)-pole. First, we can see that because of colouring is
 
 %Let $T$ be a 5-pole and $\phi$ its colouring. Then let $p$ and $q$ be its two solitary semiedges in this colouring, $2$ the colour of $p$ and $3$ the colour of $q$. In the partial graph $T'$ formed by the edges of colours $1$ and $2$ there is a chain which extremities are $p$ and a sociable semiedge $p_1$. By the interchange of colours $1$ and $2$ along this chain. we obtain a new colouring of $T$ in which $p_1$ and $q$ are solitary.
 
-Because of the isomorphism of colourings, it does not matter which colours we use in the colouring, but rather which semiedges are solitary. For a 5-pole $T(e_1,e_2,e_3,e_4,e_5)$ we denote by $R_T$ a graph with vertex set\linebreak $V=\{e_1,e_2,e_3,e_4,e_5\}$, in which for each $e_i,e_j\in V$, the graph contains an edge $e_ie_j$ if and only if there exists a colouring $\phi$ of $T$ such that the semiedges $e_i$ and $e_j$ are solitary in $\phi$. $R_T$ is called a \textit{colouring graph of T}. By \cref{lem:solitary}, $R_T$ has no pendant vertex \cite{Preissmann1983}.
+Because of the isomorphism of colourings, it does not matter which colours we use in the colouring, but rather which semiedges are solitary. Using this, we can visualize the colouring set of any 5-pole in the following way.
 
-%Since the semiedges in proper (2,3)-poles are $(a_1,a_2,b_1,b_2,b_3)$, we can use them as the set of vertices in the colouring graphs of proper (2,3)-poles.
+For a 5-pole $T(e_1,e_2,e_3,e_4,e_5)$ we denote by $R_T$ a graph with vertex set\linebreak $V=\{e_1,e_2,e_3,e_4,e_5\}$, in which for each $e_i,e_j\in V$, the graph contains an edge $e_ie_j$ if and only if there exists a colouring $\phi$ of $T$ such that the semiedges $e_i$ and $e_j$ are solitary in $\phi$. $R_T$ is called a \textit{colouring graph of T}. By \cref{lem:solitary}, $R_T$ has no pendant vertex \cite{Preissmann1983}.
+
+Since the semiedges in proper (2,3)-poles are $(a_1,a_2,b_1,b_2,b_3)$, we can use them as the set of vertices in the colouring graphs of proper (2,3)-poles.
 
 %\begin{figure}
 %	\centering
@@ -53,6 +59,6 @@ Because of the isomorphism of colourings, it does not matter which colours we us
 %	\label{fig:proper-associated-vertices}
 %\end{figure}
 
-A 5-pole $T$ \textit{allows solitary cycle} $e_1e_2\cdots e_n$ if for each $i$ from 1 to $n-1$, $T$ allows a colouring, where $e_i$ and $e_{i+1}$ are solitary, including the colouring where $e_n$ and $e_1$ are solitary.
+We will introduce a new notation to help explain how the colouring graph of a 5-pole looks. Let $T$ be a 5-pole. We say that $T$ \textit{allows solitary cycle} $e_1e_2\cdots e_n$ if for each $i$ from 1 to $n-1$, $T$ allows a colouring, where $e_i$ and $e_{i+1}$ are solitary, including the colouring where $e_n$ and $e_1$ are solitary.
 
 \input chapters/23-colouring-classes.tex
