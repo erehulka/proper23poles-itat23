@@ -2,15 +2,7 @@
 
 Using the definitions from the previous chapter, it may be clear what the name proper (2,3)-pole means. It is a proper multipole consisting of two connectors, one containing two semiedges and the second three. We can easily construct a snark from it by the~junction of the semiedges in the connector of size two and joining the semiedges from the connector of size three to a new vertex, creating an edge and a vertex, respectively. Since they are proper, the result is a snark because there is no Tait colouring, where the edges joined in the new vertex would have all different colours. Similarly, proper (2,3)-poles do not allow Tait colourings, in which the semiedges in the connector of size 2 have the same colour.
 
-Thus if we take a cubic graph $G$, remove its vertex $v$ and sever its edge $ab$, which is not incident with $v$, and the result is a proper (2,3)-pole, then $G$ must be a snark. Now let us look at it the other way and prove that for each snark, the result after removing a vertex and severing an edge will always be a proper (2,3)-pole.
-
-\begin{lemma}
-	Let $G$ be a snark. Let $T(A,B)$ be a multipole $R(G;v;ab)$ where the edge $ab$ is not incident with $v$, such that $A$ contains the two semiedges resulting from severing $ab$ and connector $B$ contains the three semiedges resulting from removing $v$. Then $T(A,B)$ is a proper (2,3)-pole.
-\end{lemma}
-
-\begin{proof}
-	We prove that $T(A,B)$ is a proper (2,3)-pole. Suppose the contrary, so there is a colouring $\phi$, for which $\phi_*(A)=0$ or $\phi_*(B)=0$. Then by the Parity Lemma, the~flow through the second connector is also zero, so $\phi_*(A)=0, \phi_*(B)=0$. This allows extending the multipole by joining the semiedges in the connector $B$ and performing the junction of semiedges in the connector $A$, resulting in the original graph, which is colourable. This means that $G$ is not a snark, which is a contradiction.
-\end{proof}
+Thus if we take a cubic graph $G$, remove its vertex $v$ and sever its edge $ab$, which is not incident with $v$, and the result is a proper (2,3)-pole, then $G$ must be a snark. It is also true the other way: for each snark, the result after removing a vertex and severing an edge not incident with it will always be a proper (2,3)-pole.
 
 By default, when we get a proper (2,3)-pole in this way, we denote it by $T(A,B)$, where the connector $A$ contains the two semiedges resulting from severing the edge and similarly, connector $B$ contains the three semiedges resulting from removing the vertex, such that $A=(a_1,a_2)$ and $B=(b_1,b_2,b_3)$. An example can be seen in \cref{fig:23-pole-example}.
 

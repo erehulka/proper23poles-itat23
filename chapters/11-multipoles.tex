@@ -12,17 +12,11 @@ In our work, we allow a specific modification of graphs, where the ends of its e
 	According to the incidence of edge ends, we define four types of edges:
 	\begin{enumerate}[nolistsep]
 		\item A \textit{link} is an edge whose ends are incident with two distinct vertices.
-		\item A \textit{loop} is an edge whose both ends are incident with the same vertex.
 		\item A \textit{dangling edge} is an edge whose one end is incident with a vertex, and the other is not.
-		\item An \textit{isolated edge} is an edge whose both ends are not incident with any vertex.
 	\end{enumerate}
 \end{definition}
 
-Loops are not allowed in our work, although, for the sake of a complete definition, they are included in the types of edges. We define some properties of multipoles based on their edge ends, but at first, it is essential to define the edge ends, not incident with a vertex.
-
-\begin{definition}
-	A \textit{semiedge} is an edge end not incident with any vertex. For a given multipole $M$, we define $S(M)$ to be the tuple containing all the semiedges in that multipole.
-\end{definition}
+Loops are not allowed in our work, although, for the sake of a complete definition, they are included in the types of edges. A \textit{semiedge} is an edge end not incident with any vertex. For a given multipole $M$, we define $S(M)$ to be the tuple containing all the semiedges in that multipole.
 
 A multipole $M$ with $S(M) = (a_1, \cdots, a_n)$ can also be denoted as $M(a_1,\cdots,a_n)$. The \textit{order} of a multipole $M$, denoted by $|M|$, is the number of its vertices. The \textit{degree} of a vertex $v$ of a multipole, denoted by $\deg(v)$, is the number of edge ends incident with $v$. In our work, we will consider \textit{cubic} multipoles, i.e. multipoles where every vertex has degree $3$. 
 
