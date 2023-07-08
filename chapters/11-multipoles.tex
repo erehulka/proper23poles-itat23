@@ -1,43 +1,20 @@
-\section{Multipoles}\label{sec:multipoles}
+\section{Multipoles}
+\label{sec:multipoles}
 
-%TODO: na koniec
-%All graphs considered in this work are undirected, and while we permit multiple edges, loops are not allowed. Definitions not provided in our work can be found in the book \quotes{Graph Theory} by R. Diestel \cite{Diestel2010}.
-%
-%The distance between two vertices $x$ and $y$ in a graph $G$, denoted by $d_G(x,y)$, is defined as the length of the shortest path between $x$ and $y$ in $G$. If no such path exists, we set $d_G(x,y)=\infty$. For a vertex $x$ and an edge $ab$ in $G$, the distance is defined as the~smallest value between $d_G(x,a)$ and $d_G(x,b)$.
-%
-%In our work, we allow a specific modification of graphs, where the ends of its edges may not be incident with a vertex, resulting in a graph with dangling edges. Such structures are called multipoles.
-%
-%\begin{definition}
-%	A \textit{multipole} is a pair $M=(V,E)$ of distinct finite sets of vertices $V$ and edges $E$, where every edge $e\in E$ has two edge ends, which may or need not be incident with a vertex.
-%	
-%	According to the incidence of edge ends, we define four types of edges:
-%	\begin{enumerate}[nolistsep]
-%		\item A \textit{link} is an edge whose ends are incident with two distinct vertices.
-%		\item A \textit{loop} is an edge whose both ends are incident with the same vertex.
-%		\item A \textit{dangling edge} is an edge whose one end is incident with a vertex, and the other is not.
-%		\item An \textit{isolated edge} is an edge whose both ends are not incident with any vertex.
-%	\end{enumerate}
-%\end{definition}
-%
-%Loops are not allowed in our work, although, for the sake of a complete definition, they are included in the types of edges. We define some properties of multipoles based on their edge ends, but at first, it is essential to define the edge ends, not incident with a vertex.
-%
-%\begin{definition}
-%	A \textit{semiedge} is an edge end not incident with any vertex. For a given multipole $M$, we define $S(M)$ to be the tuple containing all the semiedges in that multipole.
-%\end{definition}
+A \textit{multipole} is a pair $M=(V,E)$ of distinct finite sets of vertices $V$ and edges $E$, where every edge $e\in E$ has two edge ends, which may or need not be incident with a vertex. A \emph{link} is an edge incident with two distinct vertices and a \emph{dangling edge} is an edge with only one end incident with a vertex. We do not consider other type of edges. The edge ends not incident with any vertex are called \textit{semiedges}. We denote the set of its semiedges as $S(M)$.
+%TODO: vyjasniť, že polhrany sú usporiadané
 
+A multipole $M$ with $S(M) = (a_1, \cdots, a_n)$ can also be denoted as $M(a_1,\cdots,a_n)$. In our work, we will consider \textit{cubic} multipoles, i.e. multipoles where every vertex is incident with three edges. 
+A multipole with $k$ semiedges is usually called a \textit{k-pole}. 
 
-
-One of the features of multipoles is connecting them to form bigger multipoles or even graphs. For this case, dividing $S(M)$ into pairwise disjoint tuples called \emph{connectors} is convenient.
+Usually, it is convenient to partite $S(M)$ into pairwise disjoint tuples $S_1,\cdots, S_n$ called \textit{connectors}.
 A multipole $M$ with $n$ connectors $S_1,\cdots,S_n$, where $S_i$ has $c_i$ semiedges for each $i$ from $1$ to $n$, is denoted by $M(S_1,\cdots,S_n)$ and is also called a $(c_1,\cdots,c_n)$-pole.
 
-%TODO: ???
-Now, let $e$ and $f$ be edges (not necessarily distinct) and $e',~f'$ two of their semiedges respectively, such that $e'\neq f'$. If $e\neq f$, the result of the \textit{junction} of $e'$ and $f'$ is a new edge, having the other edge ends of $e$ and $f$ and a deletion of $e$ and $f$. If $e=f$, the result of the \textit{junction} of $e'$ and $f'$ is just the deletion of the edge.
-
-Let $S=(e_1,\cdots,e_n)$ and $T=(f_1,\cdots,f_n)$ be two connectors, both with $n$ semiedges. The junction of two connectors $S$ and $T$ consists of $n$ individual junctions of semiedges $e_i$ and $f_i$ for $i$ from $1$ to $n$.
-
-The junction of two $(c_1,\cdots,c_n)$-poles $M(S_1,\cdots,S_n)$ and $N(T_1,\cdots,T_n)$ consists of $n$ individual junctions of connectors $S_i$ and $T_i$, for $i$ from $1$ to $n$.
-
-Consider two multipoles $M(a_1,\cdots,a_n)$ and $N(b_1,\cdots,b_m)$. Their \textit{partial junction} is a junction of some semiedges $(a_{i_1},\cdots, a_{i_k})$ and $(b_{j_1},\cdots, b_{j_k})$, where $k\leq n$ and $k\leq m$. In contrast to a normal junction, which results in a graph, the partial junction can still result in a multipole.
+Now, we describe the process of joining two multipoles together.
+The \textit{junction} of two distinct semiedges $e$ and $f$ corresponding to edges $e'$ and $f'$, respectively, is a new link joining the remaining two edge ends of $e'$ and $f'$ different from $e$ and $f$.
+The junction of two connectors $S=(e_1,\cdots,e_n)$ and $T=(f_1,\cdots,f_n)$ consists of $n$ individual junctions of semiedges $e_i$ and $f_i$ for $i$ from $1$ to $n$.
+Similarly, the junction of two $(c_1,\cdots,c_n)$-poles $M(S_1,\cdots,S_n)$ and $N(T_1,\cdots,T_n)$ consists of $n$ individual junctions of connectors $S_i$ and $T_i$, for $i$ from $1$ to $n$.
+The \textit{partial junction} of $M$ and $N$ is a junction of some semiedges $(a_{i_1},\cdots, a_{i_k})$ and $(b_{j_1},\cdots, b_{j_k})$, where $k\leq n$ and $k\leq m$. In contrast to a normal junction, which results in a graph, the partial junction can still result in a multipole.
 
 Let $G$ be a graph, $ab$ its edge, and $v$ its vertex. By \textit{severing} the edge $ab$ in $G$, we mean removing $ab$ and adding a dangling edge to the vertices $a$ and $b$. Similarly, \textit{removing} the vertex $v$ involves the removal of $v$ along with all of its incident edges, followed by adding a dangling edge to all of the formerly neighbouring vertices of $v$. If~we obtain a multipole by removing some vertices and severing some edges in a graph, there is a default way to divide the resulting semiedges into connectors. When we remove a vertex, all semiedges formerly incident with the vertex are in a new connector. Similarly, when we sever an edge, the two new semiedges are in a new connector.
 
