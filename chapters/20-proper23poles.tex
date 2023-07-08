@@ -7,13 +7,13 @@ Similarly, for a 3-pole, all three of its semiedges must have pairwise different
 The analysis of the colouring properties of $5$-pole comes from the following ideas of P. J. Cameron, A. G. Chetwynd and J. J. Watkins \cite{Cameron1987}.
 
 %Another corollary of the Parity Lemma may be that for each 5-pole $M$ to be colourable, it needs to have three semiedges of one colour and the other two with a different colour each. The three semiedges coloured by the same colour in $\phi$ are called \textit{sociable} in $\phi$, and the other two coloured by a colour different from the others are called \textit{solitary} in $\phi$.
-By the Parity Lemma, in each colouring $\phi$ of a $5$-pole $M$, three semiedges of $M$ have the same colour. We call these edges \textit{sociable} in $\phi$. The remaining two semiedges of $M$, called \emph{solitary} in $\phi$, are colourd by the remaining two colours.
+By the Parity Lemma, in each colouring $\phi$ of a $5$-pole $M$, three semiedges of $M$ have the same colour. We call these edges \textit{sociable} in $\phi$. The remaining two semiedges of $M$, called \emph{solitary} in $\phi$, are coloured by the remaining two colours.
 Because the colouring set of $M$ is closed under a permutation of colours, it only matters which semiedges of $M$ may be solitary. Using this, we can visualize the colouring set of any 5-pole in the following way.
 % Trochu iný návrh riadku vyššie:
 %Since the colouring set of $M$ is closed under a permutaion of colours, we can decsribe $\text{col}(M)$ by specifying all pairs of semiedges of $M$ that are solitary in some colouring of $M$.
 
 %Because of the isomorphism of colourings, it does not matter which colours we use in the colouring, but rather which semiedges are solitary. For a 5-pole $T(e_1,e_2,e_3,e_4,e_5)$ we denote by $R_T$ a graph with vertex set\linebreak $V=\{e_1,e_2,e_3,e_4,e_5\}$, in which for each $e_i,e_j\in V$, the graph contains an edge $e_ie_j$ if and only if there exists a colouring $\phi$ of $T$ such that the semiedges $e_i$ and $e_j$ are solitary in $\phi$. $R_T$ is called a \textit{colouring graph of T}. By \cref{lem:solitary}, $R_T$ has no pendant vertex \cite{Preissmann1983}.
-For a 5-pole $M(e_1,e_2,e_3,e_4,e_5)$ we denote by $R_M$ a graph with vertex set $V=\{e_1,e_2,e_3,e_4,e_5\}$, in which for each $e_i,e_j\in V$, the graph contains an edge $e_ie_j$ if and only if there exists a colouring $\phi$ of $M$ such that the semiedges $e_i$ and $e_j$ are solitary in $\phi$. $R_M$ is called the \textit{colouring graph of $M$}.
+For a 5-pole $M(e_1,e_2,e_3,e_4,e_5)$ we denote by $R_M$ a graph with the vertex set $V=\{e_1,e_2,e_3,e_4,e_5\}$, in which for each $e_i,e_j\in V$, the graph contains an edge $e_ie_j$ if and only if the semiedges $e_i$ and $e_j$ are solitary in some colouring of $M$. The graph $R_M$ is called the \textit{colouring graph of $M$}.
 The colouring graph $R_M$ of any $5$-pole has no vertex of degree one \cite{Preissmann1983}.
 % TODO: k tomuto sa možno dá dodať aj formulácia tej lemy alebo spomenúť ideu dôkazu
 
@@ -35,7 +35,8 @@ From a case analysis in \cite{Preissmann1983}, it follows that if $M$ is a $5$-p
 \end{itemize}
 Accordingly, the $5$-pole $M$ whose colouring graphs are subgraphs of the mentioned graphs is called \textit{superpentagons}, \textit{negators} and \textit{proper $(2 ,3)$-poles}, respectively.
 
-The colouring graph of a superpentagon is either empty or the $5$-cycle. The colouring graph of a negator is empty, consists of one triangle or consists of two triangles with one common vertex.
+The colouring graph of a superpentagon is either empty or the $5$-cycle. The colouring graph of a negator is empty, consists of one triangle or consists of two edge-disjoint triangles with a common vertex.
+%TODO: Zišlo by sa asi lepšie sformulovať.
 Máčajová and Škoviera characterised which negators have which colouring graphs \cite{IrreducibleSnarksSkoviera}.
 For proper $(2,3)$-poles, the situation is more diverse and their colouring graphs have not been studied yet.
 
