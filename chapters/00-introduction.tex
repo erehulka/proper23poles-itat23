@@ -5,21 +5,22 @@
 % Put your introduction here. You can reference other chapters, sections, images, etc.\ using the \texttt{cleveref} package like this:~\cref{ch:terminology}.
 
 The study of \textit{snarks}, that is $2$-connected cubic graphs that are not 3-edge-colourable, is~important since they are smallest possible counterexamples for several open problems.
-One of such conjectures is the Cycle Double Cover Conjecture stating that each bridgeless graph has a family of cycles, such that each edge appears in exactly two of the cycles.
+One such conjecture is the Cycle Double Cover Conjecture stating that each bridgeless graph has a family of cycles, such that each edge appears in exactly two of the cycles.
 To exclude trivial cases, some additional properties are required from snarks like the following.
 
 Let $G$ be a cubic graph and $S$ an edge-cut of size $n$. If at least two components of $G - S$ contain a cycle, $S$ is said to be an \textit{n-edge-c-cut}. Generally, these edge-cuts are called \textit{c-cuts}. 
-A cubic graph $G$ is \textit{cyclically n-edge-connected} if there is no c-cut with less than $n$ edges. \textit{Cyclic edge-connectivity} of a cubic graph $G$ is the smallest number of edges of a c-cut of $G$.
-Another measurement of nontriviality is the \textit{girth} of a graph $G$, which is the minimum length of a cycle in $G$. If $G$ does not contain a cycle, we set the girth to $\infty$.
+A cubic graph $G$ is \textit{cyclically n-edge-connected} if there is no c-cut with less than $n$ edges. \textit{Cyclic edge-connectivity} of a cubic graph $G$ having at least one c-cut is the smallest number of edges of a c-cut of $G$.
+Another measurement of nontriviality is the \textit{girth} of a graph $G$ which is the minimum length of a cycle in $G$. If $G$ does not contain a cycle, we set the girth to $\infty$.
 
-Many authors (e.g. \cite{Preissmann1983, Nedela1996}) require that snark have girth at least $5$ and are cyclically 4-edge-connected. We call such snarks \emph{non-trivial} and the remaining ones \emph{trivial}. On the other hand, some authors allow snarks to contain bridges \cite{IrreducibleSnarksSkoviera}, making the dumbbell graph on two vertices the smallest snark (\cref{fig:dumbbell}).
+Many authors (e.g. \cite{Preissmann1983, Nedela1996}) require that snarks have girth at least $5$ and are cyclically 4-edge-connected. We call such snarks \emph{non-trivial} and the remaining ones \emph{trivial}. On the other hand, some authors allow snarks to contain bridges \cite{IrreducibleSnarksSkoviera}. 
+%making the dumbbell graph on two vertices the smallest snark (\cref{fig:dumbbell}).
 
-\begin{figure}
-	\centering
-	\input{graphs/snarks/dumbbell.tex}
-	\caption{Dumbbell graph}
-	\label{fig:dumbbell}
-\end{figure}
+%\begin{figure}
+%	\centering
+%	\input{graphs/snarks/dumbbell.tex}
+%	\caption{Dumbbell graph}
+%	\label{fig:dumbbell}
+%\end{figure}
 
 According to our definition, the Petersen graph (see \cref{fig:petersen}) is the smallest snark and it satisfies every definition of a snark. Other notable snarks are the Blanuša snarks \cite{Blanusa}, or the infinite family of flower snarks discovered by R. Isaacs \cite{Isaacs1975}. The Isaacs snarks are denoted by $J_k$, where $k$ is an odd integer $k\geq 3$.
 
@@ -30,7 +31,7 @@ According to our definition, the Petersen graph (see \cref{fig:petersen}) is the
 	\label{fig:petersen}
 \end{figure}
 
-Determining whether a given graph is a snark is an NP-complete problem \cite{HolyerNP}. However, when creating a cubic graph from some smaller building blocks, of which we know their colouring properties, we also know the colouring properties of the result. This may also include if it is a snark or not. These building blocks are called multipoles (e.g. see \cite{Nedela1996}) and can be described as an extended type of a graph that allows dangling edges.
+Determining whether a given graph is a snark is an NP-complete problem \cite{HolyerNP}. However, when creating a cubic graph from some smaller building blocks, of which we know their colouring properties, we also know the colouring properties of the result. This may also include if it is a snark or not. These building blocks are called multipoles (e.g. see \cite{Nedela1996}) and can be described as an extended type of a graph that allows dangling edges. Multipoles are useful for various constructions of snarks \cite{IrreducibleSnarksSkoviera,Lukotka15} or also for their structural analysis \cite{ChladnyFactorisation,MorphologyOfSmall}.
 
 %TODO: tu by sa ešte zišlo možno ešte pár slov
 
@@ -48,6 +49,8 @@ Determining whether a given graph is a snark is an NP-complete problem \cite{Hol
 
 %This thesis is structured as follows: In \cref{ch:multipoles-and-snarks}, we define and explain the terms necessary for understanding this topic, like the mentioned snarks, multipoles and others. In \cref{ch:proper-23-poles}, we explain what the~proper (2,3)-poles are. We define the mentioned colouring properties and divide proper (2,3)-poles into classes based on their colouring properties. In \cref{ch:our-work}, we present the~results of our work. To begin, we explain the methods of analysis we used, including a~simplified explanation of the algorithm and the format of the~outputs. We also provide some multipoles that can modify the colouring properties of proper (2,3)-poles. The~following section comprises the core of our work, presenting the theorems regarding the~colouring properties of proper (2,3)-poles. Specifically, we explore the necessary and sufficient conditions for these properties. Lastly, we provide data and observations from our analysis, including problems and questions that arose while exploring proper (2,3)-poles. We answer some of them but also include unanswered questions and problems that can be explored in further research.
 
+This paper is structured as follows. First, we develop the theory needed for our work. In \cref{sec:multipoles}, we define multipoles and all notions related to them, and in \cref{sec:multipole-colouring}, we develop the theory for describing colouring properties of multipoles. \cref{sec:5-poles} is specifically devoted to multipoles with five dangling edges while it explains the relation of proper (2,3)-poles to them. In \cref{ch:proper-23-poles}, we introduce several classes of proper (2,3)-poles with respect to their colouring properties. The rest of the paper focuses our results. \cref{sec:analysis} describes methods of our computer-assisted analysis of proper (2,3)-poles constructed from small non-trivial snarks. In \cref{sec:classes-to-perfect}, we provide multipoles that can be used to change colouring classes of proper (2,3)-poles. \cref{sec:result-theorems} contains theoretical results on colouring properties of proper (2,3)-poles. At the end, in \cref{sec:observations}, we summarise the results of our computer-assisted analysis.
+
 Definitions not provided in our work can be found in the book \quotes{Graph Theory} by R. Diestel \cite{Diestel2010}.
 We only clarify that all graphs considered in this work are undirected, and while we permit multiple edges, loops are not allowed. 
-The distance between two vertices $x$ and $y$ in a graph $G$, denoted by $d_G(x,y)$, is defined as the length of the shortest path between $x$ and $y$ in $G$. If no such path exists, we set $d_G(x,y)=\infty$. For a vertex $x$ and an edge $ab$ in $G$, the distance is defined as the~smallest value between $d_G(x,a)$ and $d_G(x,b)$.
+The distance between two vertices $x$ and $y$ in a graph $G$, denoted by $d_G(x,y)$, is defined as the length of a shortest path between $x$ and $y$ in $G$. If no such path exists, we set $d_G(x,y)=\infty$. The distance $d_G(x, ab)$ between a vertex $x$ and an edge $ab$ is defined as the~smallest value between $d_G(x,a)$ and $d_G(x,b)$.
