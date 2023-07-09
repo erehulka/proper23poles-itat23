@@ -42,7 +42,6 @@ For proper $(2,3)$-poles, the situation is more diverse and their colouring grap
 
 %Using this theorem and the Parity lemma, it can be proven that if we get two colourable $5$-poles by severing five edges in a given snark, they can be only one of three types: negators, superpentagons and proper $(2,3)$-poles. For the first two, their colouring properties are already explored, which is why we chose to explore the last type.
 
-%TODO: je to na dobrom mieste?
 %A 5-pole $T$ \textit{allows solitary cycle} $e_1e_2\cdots e_n$ if for each $i$ from 1 to $n-1$, $T$ allows a colouring, where $e_i$ and $e_{i+1}$ are solitary, including the colouring where $e_n$ and $e_1$ are solitary.
 A 5-pole $T$ \textit{allows solitary cycle} $e_1e_2\cdots e_n$ if its colouring graph $R_T$ contains the cycle $e_1e_2\cdots e_n$.
 
@@ -57,10 +56,10 @@ $$\{(a_1,a_2,b_1,b_2,b_3)\in\mathbb{K}^5~|~a_1+a_2=b_1+b_2+b_3\neq 0\}.$$
 We will refer to this set only as $C$ from now on. Note that in this definition, the~terms $a_1$ to $b_3$ denote the colours of the respective semiedges. The non-equality to zero is evident because they are proper, and the equality of flow through both connectors follows from the Parity lemma.
 
 This property implies that each proper $(2,3)$-pole $T$ can be completed to a snark by the junction of the semiedges in the connector of size two and joining the semiedges from the connector of size three to a new vertex. Conversely for each snark, the result after removing a vertex and severing an edge not incident with it will always be a proper (2,3)-pole \cite{MorphologyOfSmall}.
-%TODO: Tu úplne nerozumiem, načo je toto potrebné. Ide len o defaultné označenie konektorov a polhrán? Alebo to chce povedať niečo viac?
+
 %By default, when we get a proper (2,3)-pole in this way, we denote it by $T(A,B)$, where the connector $A$ contains the two semiedges resulting from severing the edge and similarly, connector $B$ contains the three semiedges resulting from removing the vertex, such that $A=(a_1,a_2)$ and $B=(b_1,b_2,b_3)$.
-%TODO: Nie je lepšie "ilustration " / "visualisation of this process" ako iba "example" alebo niečo také?
-An example can be seen in \cref{fig:23-pole-example}.
+
+An visualisation of this process can be seen in \cref{fig:23-pole-example}.
 
 \begin{figure*}
 	\centering
@@ -69,7 +68,6 @@ An example can be seen in \cref{fig:23-pole-example}.
 	\label{fig:23-pole-example}
 \end{figure*}
 
-%TODO: perfect odľa mňa teraz nepotrebujeme a skôr sa hodí k farebným triedam
 %A proper (2,3)-pole is called \textit{perfect} if its colouring set coincides with the colouring set $C$.
 
 %Another corollary of the Parity Lemma may be that for each 5-pole to be colourable, it needs to have three semiedges of one colour and the other two with a different colour each. This way, we can define so-called solitary and sociable semiedges.
