@@ -1,6 +1,6 @@
 \section{Methods of Analysis}\label{sec:analysis}
 
-All of the results in this chapter come from our analysis conducted on several proper (2,3)-poles. For this reason, we have created a simple program in \texttt{C++} that helps us get the desired results. The logic behind representing graphs in the program and some basic operations on them is done by the \texttt{ba\_graph} library \cite{ba-graph}. As input, it receives a~list of snarks in graph6 format \cite{mckay_formats}, parses them, and performs the following operations on each.
+All of the results in this chapter come from our analysis conducted on several proper (2,3)-poles. For this reason, we have created a simple program in \texttt{C++} that helps us get the desired results. The logic behind representing graphs in the program and some basic operations on them is done by the \texttt{ba\_graph} library \cite{ba-graph}. As input, our program receives a~list of snarks in graph6 format \cite{mckay_formats}, parses them, and performs the following operations on each.
 
 Since the proper (2,3)-poles are multipoles resulting from a snark by removing one vertex and severing one edge, this is exactly what the program does: for each vertex~$v$ and edge~$e$, where $e$ is not incident with $v$, it removes $v$, severes $e$, and thus creates a~proper (2,3)-pole. Thus, we have multiple proper (2,3)-poles from one snark.
 
@@ -12,10 +12,10 @@ Let $T$ be the proper (2,3)-pole resulting from snark $G$, after removing the ve
 	\item in which colouring class it is (see \cref{sec:colouring-classes});
 	\item the distance between the removed vertex and severed edge;
 	\item how many pairs of vertices from $\{v,x\},\{v,y\}$ are removable;
-	\item how many pairs of edges $\{xy, va\}, \{xy, vb\}, \{xy, vc\}$ are removable, where $a,b,c$ are neighbours of $v$.
+	\item how many pairs of edges $\{xy, va\}$, $\{xy, vb\}$, $\{xy, vc\}$ are removable, where $a$, $b$ and $c$ are neighbours of $v$.
 \end{itemize}
 
-For the colouring classes, we observe whether the multipole permits four colourings: those in which the solitary semiedges are $a_1$ and $b_1$, $a_1$ and $b_2$, $a_1$ and $b_3$, and $a_1$ and $a_2$. For instance, if it allows a colouring where the solitary semiedges are $a_1$ and $b_1$, it also allows a colouring with the solitary semiedges $a_2$ and $b_1$.
+For the colouring classes, we observe whether the multipole permits four colourings: those in which the solitary semiedges are $a_1$ and $b_1$, $a_1$ and $b_2$, $a_1$ and $b_3$, and $a_1$ and $a_2$, respectively. For instance, if it allows a colouring where the solitary semiedges are $a_1$ and $b_1$, it also allows a colouring with the solitary semiedges $a_2$ and $b_1$.
 
 The sets of removable pairs of edges and vertices are computed for the original snark, and then for the resulting multipole it is simply checked whether those pairs are contained in the respective sets.
 
