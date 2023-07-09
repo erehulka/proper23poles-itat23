@@ -21,7 +21,7 @@ To clarify how we got the propositions or how the data looks, we provide statist
 	\label{tab:example-of-output}
 \end{table*}
 
-As an input, we have used all snarks with a girth at least five and at most 28 vertices, which is 3,247 snarks. There are precisely 3,476,400 proper (2,3)-poles resulting from them. Most of these results are perfect proper (2,3)-poles. The proportions are in \cref{tab:proportion}.
+As an input, we have used all non-trivial snarks with at most 28 vertices, which is 3,247 snarks. There are precisely 3,476,400 proper (2,3)-poles resulting from them. Most of these results are perfect proper (2,3)-poles. The proportions are in \cref{tab:proportion}.
 
 \begin{table}[h!]
 	\centering
@@ -87,11 +87,11 @@ Another interesting observation is that no proper (2,3)-pole from the explored o
 	\label{tab:removable-edges}
 \end{table}
 
-A snark is \textit{critical} if every pair of its distinct adjacent vertices is unremovable. Similarly, a snark is \textit{cocritical} if every pair of its distinct nonadjacent vertices is unremovable. If a snark is both critical and cocritical, then we say that G is \textit{bicritical} \cite{Nedela1996}. In other words, a snark is bicritical if every pair of its distinct vertices is unremovable.
+%A snark is \textit{critical} if every pair of its distinct adjacent vertices is unremovable. Similarly, a snark is \textit{cocritical} if every pair of its distinct nonadjacent vertices is unremovable. If a snark is both critical and cocritical, then we say that G is \textit{bicritical} \cite{Nedela1996}. In other words, a snark is bicritical if every pair of its distinct vertices is unremovable.
 
-Among the 3,247 explored snarks, only five produce only colourable proper\linebreak (2,3)-poles. One is the Petersen graph, then one with 20 vertices, two with 22 and one with 28 vertices. The ones with 20 and 28 vertices are the Isaacs snarks $J_5$ and $J_7$ respectively. The two snarks with 22 vertices are the Loupekine snarks. Because of \cref{prop:uncolourable-vertices}, each of the five mentioned snarks is bicritical.
+Among the 3,247 explored snarks, only five produce only colourable proper (2,3)-poles. One is the Petersen graph, then one with 20 vertices, two with 22 and one with 28 vertices. The ones with 20 and 28 vertices are the Isaacs snarks $J_5$ and $J_7$ respectively. The two snarks with 22 vertices are the Loupekine snarks. Because of \cref{prop:uncolourable-vertices}, each of the five mentioned snarks contains no pair of removable vertices. Such snarks are called \textit{bicritical}.
 
-Now we can take a look at the bicritical snarks. We have explored each nontrivial bicritical snark with at most 32 vertices -- precisely 278 of them. There are 306,396 proper (2,3)-poles resulting from them. The proportions of their colouring classes is in \cref{tab:proportion-bicritical}.
+Since removable pair of vertices affect colouring properties, we have explored all bicritical snarks with at most 32 vertices -- precisely 278 of them. There are 306,396 proper (2,3)-poles resulting from them. The proportions of their colouring classes is in \cref{tab:proportion-bicritical}.
 
 \begin{table}[h!]
 	\centering
@@ -107,9 +107,9 @@ Now we can take a look at the bicritical snarks. We have explored each nontrivia
 		\hline
 		2A & $0.32\%$ & 968 \\ 
 		\hline
-		3B & $0.00\%$ & 10 \\ 
+		3B & $< 0.01\%$ & 10 \\ 
 		\hline
-		2B & $0.00\%$ & 2 \\ 
+		2B & $< 0.01\%$ & 2 \\ 
 		\hline
 	\end{tabular}
 	\caption{Proportion of colouring classes in explored proper (2,3)-poles from bicritical snarks}
