@@ -7,7 +7,7 @@ However, not each graph on these vertices represents a possible colouring set. F
 
 This means there are only $12$ different colouring sets of proper (2,3)-poles, which can be divided into classes in the following way. We denote the classes by a number representing how many vertices from $\{b_1,b_2,b_3\}$ are connected to $\{a_1,a_2\}$ with an edge in the colouring graph, followed by A if the colouring allows an edge between $a_1$ and $a_2$, or B otherwise. Resulting are six colouring classes: 0B (uncolourable), 1A, 2B, 2A, 3B and 3A. Proper (2,3)-poles from Class 3A, that is those whose colouring set coincides with $C$, are also called \textit{perfect}. For each of them we have found an example, in this article we provide an example of an uncolourable proper (2,3)-pole in \cref{fig:uncolourable-example} resulting from the second Blanuša snark and a perfect one in \cref{fig:perfect-example} resulting from the Petersen graph.
 
-The colouring graphs for Class 1A can be observed in \cref{fig:class-1A} as an illustrative example.
+The colouring graphs for each class can be observed in \cref{fig:colouring-classes}.
 
 \begin{figure}
 	\centering
@@ -20,28 +20,85 @@ The colouring graphs for Class 1A can be observed in \cref{fig:class-1A} as an i
 
 \begin{figure}
 	\centering
-	\input{graphs/colouringsExamples/perfect.tex}
+	\scalebox{0.7}{
+		\input{graphs/colouringsExamples/perfect.tex}
+	}
 	\caption{Example of a perfect proper (2,3)-pole}
 	\label{fig:perfect-example}
 \end{figure}
 
 \begin{figure*}
 	\centering
-	\begin{subfigure}{0.25\textwidth}
-		\centering
-		\input{graphs/23-poles-colorings/triangle1.tex}
+	\begin{subfigure}{0.16\textwidth}
+		\scalebox{0.55}{
+			\input{graphs/23-poles-colorings/triangle1.tex}
+		}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.25\textwidth}
-		\centering
-		\input{graphs/23-poles-colorings/triangle2.tex}
+	\begin{subfigure}{0.16\textwidth}
+		\scalebox{0.55}{
+			\input{graphs/23-poles-colorings/triangle2.tex}
+		}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.25\textwidth}
-		\centering
-		\input{graphs/23-poles-colorings/triangle3.tex}
+	\begin{subfigure}{0.16\textwidth}
+		\scalebox{0.55}{
+			\input{graphs/23-poles-colorings/triangle3.tex}
+		}
 	\end{subfigure}
-	\vspace{-1.1\baselineskip}
-	\caption{Colouring graphs for class 1A}
-	\label{fig:class-1A}
+	\begin{subfigure}{0.16\textwidth}
+		\scalebox{0.55}{
+			\input{graphs/23-poles-colorings/2trianglesNo12_1.tex}
+		}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.16\textwidth}
+		\scalebox{0.55}{
+			\input{graphs/23-poles-colorings/2trianglesNo12_2.tex}
+		}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.16\textwidth}
+		\scalebox{0.55}{
+			\input{graphs/23-poles-colorings/2trianglesNo12_3.tex}
+		}
+	\end{subfigure}
+	 \newline 
+	 \begin{subfigure}{0.16\textwidth}
+	 	\scalebox{0.55}{
+	 		\input{graphs/23-poles-colorings/2triangles1.tex}
+	 	}
+	 \end{subfigure}
+	 \hfill
+	 \begin{subfigure}{0.16\textwidth}
+	 	\scalebox{0.55}{
+	 		\input{graphs/23-poles-colorings/2triangles2.tex}
+	 	}
+	 \end{subfigure}
+	 \hfill
+	 \begin{subfigure}{0.16\textwidth}
+	 	\scalebox{0.55}{
+	 		\input{graphs/23-poles-colorings/2triangles3.tex}
+	 	}
+	 \end{subfigure}
+	 \begin{subfigure}{0.16\textwidth}
+	 	\scalebox{0.55}{
+	 		\input{graphs/23-poles-colorings/uncolourable.tex}
+	 	}
+	 \end{subfigure}
+	 \hfill
+	 \begin{subfigure}{0.16\textwidth}
+	 	\scalebox{0.55}{
+	 		\input{graphs/23-poles-colorings/almostPerfect.tex}
+	 	}
+	 \end{subfigure}
+	 \hfill
+	 \begin{subfigure}{0.16\textwidth}
+	 	\scalebox{0.55}{
+	 		\input{graphs/23-poles-colorings/perfect.tex}
+	 	}
+	 \end{subfigure}
+	%\vspace{-1.1\baselineskip}
+	\caption{Colouring graphs for class 1A (first three), 2B (last three in the first row), 2A (first three in the second row), 0B, 3B and 3A}
+	\label{fig:colouring-classes}
 \end{figure*}
